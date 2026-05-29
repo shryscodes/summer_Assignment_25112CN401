@@ -1,0 +1,17 @@
+// Write a program to Find product of digits.
+#include<stdio.h>
+int main(){
+    int n, d, product=1, temp;
+    printf("Enter the number whose digits you want to product: \n");
+    scanf("%d", &n);
+    temp=n;
+    while (n!=0)
+    {
+        d=n%10;
+        product= product*d;
+        n/=10;
+    }
+    printf("The product of digits of %d is: %d", temp, product);
+    
+    return 0;
+}
