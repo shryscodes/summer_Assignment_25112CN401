@@ -1,6 +1,7 @@
 //this program checks whether the given number is pallindrome or not
 #include<stdio.h>
-int main(){
+int main()
+{
     int n, reverse=0, d, temp;
     printf("Enter a number: \n");
     scanf("%d", &n);
