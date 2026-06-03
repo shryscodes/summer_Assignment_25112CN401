@@ -5,8 +5,7 @@ int main(){
     printf("Enter a number: \n");
     scanf("%d", &n);
     temp= n;
-    while(n!=0)
-    {
+    while(n!=0){
         d= n%10;
         sum+=d;
         n/=10;
