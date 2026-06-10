@@ -1,3 +1,5 @@
+// Write a program to Find sum and average of
+// array.
 import java.util.Scanner;
 
 public class Q50 {
