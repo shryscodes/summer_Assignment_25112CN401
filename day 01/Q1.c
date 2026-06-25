@@ -5,6 +5,6 @@ int main(){
     printf("Enter the number upto which you want to calculate the sum: \n");
     scanf("%d", &n);
     sum= n*(n+1)/2;
-    printf("Sum upto %d is: %d", n, sum);
+    printf("Sum upto %d is: %d", n, sum); 
     return 0;
 }
