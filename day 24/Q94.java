@@ -1,0 +1,46 @@
+// Write a program to Compress a string.
+
+import java.util.Scanner;
+
+public class Q94 {
+    public static String compress(String str){
+
+        if(str == null || str.length() == 0){
+            return str ;
+        }
+
+        StringBuilder compressed = new StringBuilder();
+
+        int count = 1; 
+        
+        for(int i = 1; i < str.length(); i++){
+
+            if(str.charAt(i) == str.charAt(i - 1)){
+                count++;
+            }else{
+                compressed.append(str.charAt(i - 1));
+                compressed.append(count);
+                count = 1;
+            }
+        }
+
+        compressed.append(str.charAt(str.length() - 1));
+        compressed.append(count);
+
+        if(compressed.length() < str.length()){
+            return compressed.toString();
+        } 
+
+        return str;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Input String: ");
+        String str = sc.nextLine();
+
+        System.out.println("Original String: " + str);
+        System.out.println("Compressed String: " + compress(str));
+        sc.close();
+    }
+}
